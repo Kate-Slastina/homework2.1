@@ -4,25 +4,21 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        var i = n%10;
-        switch (i){
-
-            case 1:
-                System.out.println(n + " TORT");
-                break;
-            case 2:
-            case 3:
-            case 4:
-                System.out.println(n + " TORTA");
-                break;
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-            case 0:
-                System.out.println(n + " TORTOV");
-                break;
-        }
+        int b = 11;
+        int j = 2;
+        int i = 1;
+        int k = 0;
+        while (i<n){
+            if (i%2==0){
+                b=b-10*j;
+                ++k;
+            }else {
+                b=b*3;
+            }
+            if ((k%7==0) && (k!=0)){
+                ++j;
+            }
+            ++i;
+        }System.out.println(b + " кроликов и " + j + " волка в "+ n  + " 52месяце" );
     }
 }
