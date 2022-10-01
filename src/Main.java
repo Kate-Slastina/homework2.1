@@ -1,24 +1,23 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        int b = 11;
-        int j = 2;
-        int i = 1;
+        int b = 10;
         int k = 0;
-        while (i<n){
-            if (i%2==0){
-                b=b-10*j;
-                ++k;
-            }else {
-                b=b*3;
+        int t =0;
+        int l =n;
+        while (l>0){
+            ++t;
+            l = l/10;
+        }
+        for (int i = 0;i < t;++i){
+            k = n%10;
+            if (b > k){
+                b = k;
             }
-            if ((k%7==0) && (k!=0)){
-                ++j;
-            }
-            ++i;
-        }System.out.println(b + " кроликов и " + j + " волка в "+ n  + " 52месяце" );
+            n = n/10;
+        } System.out.println(b);
     }
 }
