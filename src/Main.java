@@ -3,16 +3,22 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int a = in.nextInt();
-        int b = 1;
-        int j = 0;
+        int n = in.nextInt();
+        int b = 11;
+        int j = 2;
+        int i = 1;
         int k = 0;
-        var i = 0;
-            while ( i < a){
-                k = b + j;
-                j = b;
-                b = k;
-                ++i;
-        }System.out.println(b);
+           while (i<n){
+               if (i%2==0){
+                   b=b-10*j;
+                   ++k;
+               }else {
+                   b=b*3;
+               }
+               if ((k%7==0) && (k!=0)){
+                   ++j;
+               }
+               ++i;
+        }System.out.println(b + " кроликов и " + j + " волка в "+ n  + " 52месяце" );
     }
 }
